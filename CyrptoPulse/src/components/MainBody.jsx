@@ -7,30 +7,74 @@ const MainBody = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-blue-600 mb-4">Cryptocurrency List</h2>
           <div className="bg-white shadow-md rounded-lg p-4">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr>
-                  <th className="text-gray-600 font-medium text-sm py-2 border-b">Number</th>
-                  <th className="text-gray-600 font-medium text-sm py-2 border-b">Name</th>
-                  <th className="text-gray-600 font-medium text-sm py-2 border-b">Price</th>
-                  <th className="text-gray-600 font-medium text-sm py-2 border-b">Change </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="py-2 border-b text-sm">1</td>
-                  <td className="py-2 border-b text-sm">Bitcoin</td>
-                  <td className="py-2 border-b text-sm">$43,000</td>
-                  <td className="py-2 border-b text-sm text-green-500">+2.5%</td>
-                </tr>
-                <tr>
-                  <td className="py-2 border-b text-sm">2</td>
-                  <td className="py-2 border-b text-sm">Ethereum</td>
-                  <td className="py-2 border-b text-sm">$3,200</td>
-                  <td className="py-2 border-b text-sm text-red-500">-1.2%</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="flex flex-wrap justify-center">
+              <div className="w-full md:w-1/3 p-4">
+                <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                  <img src="https://ultimatesecurecash.info/wp-content/uploads/2020/06/Bitcoin-chart.jpg" alt="Bitcoin" className="w-full h-32 object-cover"/>
+                  <div className="p-4">
+                    <h2 className="text-gray-800 font-bold text-xl">Bitcoin</h2>
+                    <p className="text-gray-600 text-sm">Price: $43,000</p>
+                    <p className="text-green-500 text-sm">Change: +2.5%</p>
+                    <p className="text-gray-600 text-sm">Volume Traded: 98,76,54,321</p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/3 p-4">
+                <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                  <img src="https://www.investopedia.com/thmb/cUGagN7B8wrie4J0FdzxKMIq7P4=/4500x3002/filters:fill(auto,1)/stack-of-ether-coins-with-gold-background-901948904-a546d2200ec44115a4c219bce36f88bf.jpg" alt="Ethereum" className="w-full h-32 object-cover"/>
+                  <div className="p-4">
+                    <h2 className="text-gray-800 font-bold text-xl">Ethereum</h2>
+                    <p className="text-gray-600 text-sm">Price: $3,200</p>
+                    <p className="text-red-500 text-sm">Change: -1.2%</p>
+                    <p className="text-gray-600 text-sm">Volume Traded: 12,34,56,789</p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/3 p-4">
+                <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                  <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="Solana" className="w-full h-32 object-cover"/>
+                  <div className="p-4">
+                    <h2 className="text-gray-800 font-bold text-xl">Solana</h2>
+                    <p className="text-gray-600 text-sm">Price: $150</p>
+                    <p className="text-green-500 text-sm">Change: +5.0%</p>
+                    <p className="text-gray-600 text-sm">Volume Traded: 15,67,89,012</p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/3 p-4">
+                <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd9bcruJbhodmvjKayM9xWuOh-JZ7MO3-4SQ&s" alt="Ripple" className="w-full h-32 object-cover"/>
+                  <div className="p-4">
+                    <h2 className="text-gray-800 font-bold text-xl">Ripple</h2>
+                    <p className="text-gray-600 text-sm">Price: $1.20</p>
+                    <p className="text-red-500 text-sm">Change: -0.8%</p>
+                    <p className="text-gray-600 text-sm">Volume Traded: 8,91,23,456</p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/3 p-4">
+                <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                  <img src="https://cryptologos.cc/logos/cardano-ada-logo.png" alt="Cardano" className="w-full h-32 object-cover"/>
+                  <div className="p-4">
+                    <h2 className="text-gray-800 font-bold text-xl">Cardano</h2>
+                    <p className="text-gray-600 text-sm">Price: $1.60</p>
+                    <p className="text-green-500 text-sm">Change: +3.2%</p>
+                    <p className="text-gray-600 text-sm">Volume Traded: 9,56,78,234</p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/3 p-4">
+                <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                  <img src="https://walloftraders.com/blog/wp-content/uploads/2022/02/polkadot-1.jpg" alt="Polkadot" className="w-full h-32 object-cover"/>
+                  <div className="p-4">
+                    <h2 className="text-gray-800 font-bold text-xl">Polkadot</h2>
+                    <p className="text-gray-600 text-sm">Price: $25</p>
+                    <p className="text-green-500 text-sm">Change: +4.5%</p>
+                    <p className="text-gray-600 text-sm">Volume Traded: 5,23,45,678</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section>
