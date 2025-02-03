@@ -89,6 +89,7 @@ const CryptoPrices = () => {
       </div>
     </div>
   );
+}
 
   
 
