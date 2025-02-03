@@ -20,6 +20,7 @@ const CryptoPrices = () => {
               per_page: 10,
               page: 1,
               sparkline: false,
+              price_change_percentage: "24h",
             },
           }
         );
@@ -35,7 +36,6 @@ const CryptoPrices = () => {
     fetchCryptoData();
   }, []);
 
-  
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
@@ -46,14 +46,15 @@ const CryptoPrices = () => {
     setFilteredData(filtered);
   };
 
+  const getColor = (priceChange) => (priceChange > 0 ? "text-green-500" : "text-red-500");
+
+  const getArrow = (priceChange) => (priceChange > 0 ? "↑" : "↓");
+
   if (loading) return <div className="text-center text-xl font-bold">Loading...</div>;
   if (error) return <div className="text-red-500 text-center">{error}</div>;
 
   return (
     <div className="p-4">
-      
-
-     
       <div className="mb-6">
         <input
           type="text"
@@ -63,7 +64,6 @@ const CryptoPrices = () => {
           className="block w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm placeholder-gray-500"
         />
       </div>
-
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredData.length > 0 ? (
@@ -80,7 +80,12 @@ const CryptoPrices = () => {
                 </div>
               </div>
               <p className="text-base font-medium">
-                <span className="font-bold">Price:</span> ${coin.current_price.toFixed(2)}
+                <span className="font-bold">Price:</span> 
+                <span className={`ml-2 ${getColor(coin.price_change_percentage_24h)}`}>
+                  ${coin.current_price.toFixed(2)}{" "}
+                  <span>{getArrow(coin.price_change_percentage_24h)}</span>
+                  <span>({coin.price_change_percentage_24h.toFixed(2)}%)</span>
+                </span>
               </p>
               <p className="text-base font-medium">
                 <span className="font-bold">Market Cap:</span> ${coin.market_cap.toLocaleString()}
@@ -96,6 +101,7 @@ const CryptoPrices = () => {
       </div>
     </div>
   );
-};
+
+  
 
 export default CryptoPrices;
