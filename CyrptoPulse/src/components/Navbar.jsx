@@ -2,12 +2,12 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-slate-300 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <span className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition duration-200 cursor-pointer">
-              CryptoTracker
+              CryptoPulse
             </span>
           </div>
           <div className="flex-1 max-w-lg mx-6">
